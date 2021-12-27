@@ -10,6 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 # from bot import get_stock_info
 
 def stock_check(stock_code):
+    """Takes in Yahoo stock codes in Yahoo's basic format, e.g. D05.SI for DBS"""
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
@@ -18,8 +19,8 @@ def stock_check(stock_code):
         executable_path='D:\PythonFiles\Drivers\chromedriver.exe'
         )
 
-    url1 = f"https://sg.finance.yahoo.com/quote/{stock_code}.SI?p={stock_code}.SI"
-    url2 = f"https://sg.finance.yahoo.com/quote/{stock_code}.SI/key-statistics?p={stock_code}.SI"
+    url1 = f"https://sg.finance.yahoo.com/quote/{stock_code}?p={stock_code}"
+    url2 = f"https://sg.finance.yahoo.com/quote/{stock_code}/key-statistics?p={stock_code}"
 
     unchecked1, unchecked2 = True, True
     stock = {}
