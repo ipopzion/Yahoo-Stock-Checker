@@ -2,11 +2,11 @@
 Getting information of a stock from Yahoo 
 
 # yahoo_stock.py
-This script contains only one function, taking in the yahoo stock code as an input and returning the stock information dictionary as an output, without any side effects. 
-This script access the following 2 urls using selenium: 
-  https://sg.finance.yahoo.com/quote/{stock_code}?p={stock_code}
-  https://sg.finance.yahoo.com/quote/{stock_code}/key-statistics?p={stock_code}
-before reading the tables with BeautifulSoup in bs4. 
+This script contains only one function, taking in the yahoo stock code as an input and returning the stock information dictionary as an output, without any side effects.  
+This script access the following 2 urls using selenium:  
+  https://sg.finance.yahoo.com/quote/{stock_code}?p={stock_code}  
+  https://sg.finance.yahoo.com/quote/{stock_code}/key-statistics?p={stock_code}  
+before reading the tables with BeautifulSoup in bs4.  
 The funciton is meant to be used in other bigger projects, such as data compilation or a stock bot as shown below. 
 
 # bot.py 
