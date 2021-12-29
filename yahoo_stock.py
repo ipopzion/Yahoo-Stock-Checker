@@ -19,8 +19,8 @@ def stock_check(stock_code):
         executable_path='D:\PythonFiles\Drivers\chromedriver.exe'
         )
 
-    url1 = f"https://sg.finance.yahoo.com/quote/{stock_code}?p={stock_code}"
-    url2 = f"https://sg.finance.yahoo.com/quote/{stock_code}/key-statistics?p={stock_code}"
+    url1 = f"https://finance.yahoo.com/quote/{stock_code}?p={stock_code}"
+    url2 = f"https://finance.yahoo.com/quote/{stock_code}/key-statistics?p={stock_code}"
 
     unchecked1, unchecked2 = True, True
     stock = {}
