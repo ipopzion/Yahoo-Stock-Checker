@@ -47,10 +47,10 @@ def get_stock_info(update, context):
     print(stock_code)
     stock_info = stock_check(stock_code)
     text = f"\
-<a href='https://sg.finance.yahoo.com/quote/{stock_code}.SI/key-statistics?p={stock_code}.SI'>{stock_code}</a>\n\
-Price         : {stock_info['Previous close']}\n\
-PE-Ratio   : {stock_info['PE ratio (TTM)'] or ''}\n\
-Dividends : {stock_info['Forward annual dividend yield 4'] or ''}\n"
+<a href='https://finance.yahoo.com/quote/{stock_code}/key-statistics?p={stock_code}'>{stock_code}</a>\n\
+Price         : {stock_info['Previous Close']}\n\
+PE-Ratio   : {stock_info['PE Ratio (TTM)']}\n\
+Dividends : {stock_info['Forward Annual Dividend Yield 4']}\n"
     update.message.reply_text(text=text, parse_mode=telegram.ParseMode.HTML)
 
 def error(update, context):
